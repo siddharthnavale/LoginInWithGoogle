@@ -1,0 +1,25 @@
+
+spring:
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/LoginGoogle
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+      
+  
+  security:
+    oauth2:
+      client:
+        registration:
+         google:
+          clientId: 672442943311-45h0qi68b67irvdqaa96vmte6mu8te9i.apps.googleusercontent.com
+          clientSecret: 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
+          scope:
+           - email
+           - profile
